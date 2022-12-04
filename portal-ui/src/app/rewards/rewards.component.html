@@ -1,0 +1,27 @@
+<div class="container">
+  <header class="jumbotron">
+    <h2 class="p-3 text-center">Rewards Achieved</h2>
+    <div class="container">
+      <table class="table table-striped table-bordered">
+        <thead>
+        <tr>
+          <th>S.No</th>
+          <th>Reward Name</th>
+          <th>Description</th>
+          <th>Created By</th>
+          <th>Created Date</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let reward of rewards">
+          <td>{{reward.rewardId}}</td>
+          <td>{{reward.reward_name}}</td>
+          <td>{{reward.description}}</td>
+          <td>{{reward.createdBy}}</td>
+          <td>{{reward.createdDate}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </header>
+</div>
