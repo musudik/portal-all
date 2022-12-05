@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "dc55378f-e103-4aa4-bc1d-ed2096242578",
 		"name": "HealthCare Portal",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
 		{
@@ -22,18 +22,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:8080/user/singUp",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"user",
-						"singUp"
-					]
-				}
+				"url": "http://localhost:8080/user/singUp"
 			},
 			"response": []
 		},
@@ -54,18 +43,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:8080/user/singUp",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"user",
-						"singUp"
-					]
-				}
+				"url": "http://localhost:8080/user/singUp"
 			},
 			"response": []
 		},
@@ -86,18 +64,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:8080/user/singUp",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"user",
-						"singUp"
-					]
-				}
+				"url": "http://localhost:8080/user/singUp"
 			},
 			"response": []
 		},
@@ -118,18 +85,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:8080/user/singUp",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"user",
-						"singUp"
-					]
-				}
+				"url": "http://localhost:8080/user/singUp"
 			},
 			"response": []
 		},
@@ -150,18 +106,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:8080/user/singUp",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"user",
-						"singUp"
-					]
-				}
+				"url": "http://localhost:8080/user/singUp"
 			},
 			"response": []
 		},
@@ -182,18 +127,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:8080/user/singUp",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"user",
-						"singUp"
-					]
-				}
+				"url": "http://localhost:8080/user/singUp"
 			},
 			"response": []
 		},
@@ -214,18 +148,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:8080/user/singUp",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"user",
-						"singUp"
-					]
-				}
+				"url": "http://localhost:8080/user/singUp"
 			},
 			"response": []
 		},
@@ -246,18 +169,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:8080/user/singUp",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"user",
-						"singUp"
-					]
-				}
+				"url": "http://localhost:8080/user/singUp"
 			},
 			"response": []
 		},
@@ -278,18 +190,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:8080/user/singUp",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"user",
-						"singUp"
-					]
-				}
+				"url": "http://localhost:8080/user/singUp"
 			},
 			"response": []
 		},
@@ -310,18 +211,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:8080/user/singUp",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"user",
-						"singUp"
-					]
-				}
+				"url": "http://localhost:8080/user/singUp"
 			},
 			"response": []
 		}
