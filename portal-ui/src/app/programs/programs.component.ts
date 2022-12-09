@@ -3,6 +3,8 @@ import { ProgramService } from '../_services/program.service';
 import { TokenStorageService } from '../_services/token-storage.service';
 import { AuthService } from '../_services/auth.service';
 import { Program } from "../model/program.model";
+import { timer } from 'rxjs';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-programs',
@@ -65,7 +67,8 @@ export class ProgramsComponent implements OnInit {
          data => {
          console.log(data);
             this.msg='You are successfully registered for the program ' +programId  + ', please reload this page';
-            return this.msg;
+            //return this.msg;
+            this.reloadPage();
          },
          err => {
            this.msg = err.error.message;
@@ -83,11 +86,17 @@ export class ProgramsComponent implements OnInit {
          data => {
          console.log(data);
             this.msg='You are successfully deregistered for the program ' +programId + ', please reload this page';
-            return this.msg;
+            //return this.msg;
+            this.reloadPage();
          },
          err => {
            this.msg = err.error.message;
          }
       );
+  }
+
+  async reloadPage() {
+     await timer(1000).pipe(take(1)).toPromise();
+     window.location.reload();
   }
 }
