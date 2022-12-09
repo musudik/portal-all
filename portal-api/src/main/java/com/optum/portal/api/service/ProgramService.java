@@ -2,8 +2,10 @@ package com.optum.portal.api.service;
 
 import com.optum.portal.api.model.EnrollProgramRequest;
 import com.optum.portal.api.model.Program;
+import com.optum.portal.api.model.Reward;
 import com.optum.portal.api.model.User;
 import com.optum.portal.api.repository.IProgramRepository;
+import com.optum.portal.api.repository.IRewardRepository;
 import com.optum.portal.api.repository.IUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,6 +24,9 @@ public class ProgramService {
 
     @Autowired
     private IUserRepository userRepository;
+
+    @Autowired
+    private IRewardRepository rewardRepository;
 
     /**
      * save program
@@ -69,6 +74,26 @@ public class ProgramService {
             }
             selectedUser.getPrograms().addAll(selectedPrograms);
             selectedUser = userRepository.save(selectedUser);
+
+            int programsRegistered =  selectedUser.getPrograms().size();
+            if(programsRegistered > 1) {
+                List<Reward> rewardsList = rewardRepository.findAll();
+                switch (programsRegistered) {
+                    case 2:
+                        selectedUser.getRewards().add(rewardsList.get(0));
+                        break;
+                    case 4:
+                        selectedUser.getRewards().add(rewardsList.get(1));
+                        break;
+                    case 5:
+                        selectedUser.getRewards().add(rewardsList.get(2));
+                        break;
+                    case 6:
+                        selectedUser.getRewards().add(rewardsList.get(3));
+                        break;
+                }
+                selectedUser = userRepository.save(selectedUser);
+            }
         }
         return selectedUser;
     }

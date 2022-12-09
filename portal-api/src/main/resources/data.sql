@@ -25,11 +25,11 @@ INSERT INTO questionnaire (questionnaire_id, question, answer, created_by, creat
 VALUES (5, 'What are the working hours?', 'All days from 8AM to 6PM', 'System', '2022-12-02 12:00:00');
 
 INSERT INTO reward (reward_id, reward_name, description, created_by, created_date)
-VALUES (1001, 'Star Of the Month', 'Best customer of the month', 'System', '2022-12-02 12:00:00');
+VALUES (1001, 'Best Newbie', 'Best New Joinee of the fitness program', 'System', '2022-12-02 12:00:00');
 INSERT INTO reward (reward_id, reward_name, description, created_by, created_date)
-VALUES (1002, 'Best Newbie', 'Best New Joinee of the fitness program', 'System', '2022-12-02 12:00:00');
+VALUES (1002, 'Shooting Star', 'Best customer of the month', 'System', '2022-12-02 12:00:00');
 INSERT INTO reward (reward_id, reward_name, description, created_by, created_date)
-VALUES (1003, 'Star Family', 'Best Family of the month in family program', 'System', '2022-12-02 12:00:00');
+VALUES (1003, 'Quick Five', 'Fastest to subscribe 5 programs', 'System', '2022-12-02 12:00:00');
 INSERT INTO reward (reward_id, reward_name, description, created_by, created_date)
-VALUES (1004, 'Quick 5', 'Fastest to subscribe 5 programs', 'System', '2022-12-02 12:00:00');
+VALUES (1004, 'Grand Master', 'Grand Master of all subscriptions', 'System', '2022-12-02 12:00:00');
 commit;

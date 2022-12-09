@@ -51,7 +51,7 @@ public class AuthController {
         Result result = new Result();
         try {
             User newUser = new User(user.getFirstName(), user.getLastName(),
-                    user.getUsername(), user.getPassword(), user.getEmail());
+                    user.getUsername(), user.getPassword(), user.getEmail(), user.getRole());
             User signedUpUser = authService.save(newUser);
             sendEmail(signedUpUser);
             result.setResult(Result.SUCCESS);

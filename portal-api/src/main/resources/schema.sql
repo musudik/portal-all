@@ -64,6 +64,7 @@ CREATE TABLE 'user' (
   'last_name' varchar(255) DEFAULT NULL,
   'password' varchar(255) DEFAULT NULL,
   'username' varchar(255) DEFAULT NULL,
+  'role' varchar(255) DEFAULT NULL,
   PRIMARY KEY ('user_id'),
   UNIQUE KEY 'UKsb8bbouer5wak8vyiiy4pf2bx' ('username')
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

@@ -17,14 +17,6 @@ export class ProgramsComponent implements OnInit {
   public userPrograms: any;
   public msg:string;
 
-//   users = [
-//           { firstName: 'Frank', lastName: 'Murphy', email: 'frank.murphy@test.com', role: 'User' },
-//           { firstName: 'Vic', lastName: 'Reynolds', email: 'vic.reynolds@test.com', role: 'Admin' },
-//           { firstName: 'Gina', lastName: 'Jabowski', email: 'gina.jabowski@test.com', role: 'Admin' },
-//           { firstName: 'Jessi', lastName: 'Glaser', email: 'jessi.glaser@test.com', role: 'User' },
-//           { firstName: 'Jay', lastName: 'Bilzerian', email: 'jay.bilzerian@test.com', role: 'User' }
-//       ];
-
   constructor(private programService: ProgramService, private authService: AuthService, private tokenStorage: TokenStorageService) {
     this.programs = [];
     this.userPrograms = [];

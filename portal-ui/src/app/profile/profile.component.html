@@ -1,25 +1,45 @@
-<div class="container" *ngIf="currentUser; else loggedOut">
-  <header class="jumbotron">
-    <h3>
-      <strong>{{ currentUser.username }}</strong> Profile
-    </h3>
-  </header>
-  <p>
-    <strong>Token:</strong>
-    {{ currentUser.accessToken.substring(0, 20) }} ...
-    {{ currentUser.accessToken.substr(currentUser.accessToken.length - 20) }}
-  </p>
-  <p>
-    <strong>Email:</strong>
-    {{ currentUser.email }}
-  </p>
-  <strong>Roles:</strong>
-  <ul>
-    <li *ngFor="let role of currentUser.roles">
-      {{ role }}
-    </li>
-  </ul>
+<!-- Header Start -->
+<div class="container-fluid bg-primary py-5 px-0" style="margin-bottom: 10px;">
+  <div class="row mx-0 align-items-center">
+    <div class="col-lg-6 px-md-5 text-center text-lg-left" *ngIf="currentUser; else loggedOut">
+      <h1 class="display-6 text-uppercase mb-3">{{ currentUser.username }}'s Profile</h1>
+      <img class="img-fluid rounded mx-auto my-3" src="assets/img/testimonial-4.jpg" alt="">
+      <span>
+        <h4 class="text-uppercase">{{ currentUser.firstName }} {{ currentUser.lastName }}</h4>
+      </span>
+    </div>
+  </div>
 </div>
+<div class="row mx-0 align-items-center  px-5" style="margin-bottom: 20px;">
+    <span>
+        <h4 class="text-uppercase"><span class="text-primary">Email:</span> {{ currentUser.email }}</h4>
+        <h4 class="text-uppercase"><span class="text-primary">Role:</span> {{ currentUser.role }}</h4>
+        <h4 class="text-uppercase"><span class="text-primary">Username:</span>  {{ currentUser.username }}</h4>
+        <h4 class="text-uppercase"><span class="text-primary">ID:</span>  {{ currentUser.id }}</h4>
+        <h4 class="text-uppercase"><span class="text-primary">Registered On:</span>  {{ currentUser.createdDate }}</h4>
+    </span>
+</div>
+<div class="row mx-0 align-items-center  px-5">
+    <h3 class="text-uppercase text-primary mb-3">Programs Enrolled</h3>
+      <ng-container *ngFor="let program of currentUser.programs">
+        <div class="row mx-0 align-items-center px-5">
+          <span>
+          <h4 class="text-uppercase">{{ program.program_name }}</h4>
+          </span>
+        </div>
+      </ng-container>
+</div>
+<div class="row mx-0 align-items-center  px-5">
+  <h3 class="text-uppercase text-primary mb-3">Awards Achieved</h3>
+  <ng-container *ngFor="let reward of currentUser.rewards">
+    <div class="row mx-0 align-items-center px-5">
+          <span>
+          <h4 class="text-uppercase">{{ reward.reward_name }}</h4>
+          </span>
+    </div>
+  </ng-container>
+</div>
+
 
 <ng-template #loggedOut>
   Please login.

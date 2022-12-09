@@ -36,10 +36,10 @@ public class Reward extends BaseEntity implements Serializable {
 	@Column(name = "description", nullable = false)
 	private String description;
 
-//	@ManyToOne(fetch = FetchType.LAZY)
-//	@JoinColumn(name = "reward", nullable = false)
-//	@OnDelete(action = OnDeleteAction.CASCADE)
-//	private User user;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "reward", nullable = true)
+	@OnDelete(action = OnDeleteAction.CASCADE)
+	private User user;
 
 	public Long getRewardId() {
 		return rewardId;
@@ -65,11 +65,11 @@ public class Reward extends BaseEntity implements Serializable {
 		this.description = description;
 	}
 
-//	public User getUser() {
-//		return user;
-//	}
-//
-//	public void setUser(User user) {
-//		this.user = user;
-//	}
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
 }

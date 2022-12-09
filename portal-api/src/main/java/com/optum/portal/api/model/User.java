@@ -18,7 +18,7 @@ public class User extends BaseEntity implements Serializable {
 
     protected User() {
     }
-    public User(String firstName, String lastName, String username, String password, String email) {
+    public User(String firstName, String lastName, String username, String password, String email, String role) {
         super();
         this.firstName = firstName;
         this.lastName = lastName;
@@ -26,6 +26,7 @@ public class User extends BaseEntity implements Serializable {
         this.password = password;
         this.active=true;
         this.username=username;
+        this.role = role;
     }
 
     @Id
@@ -58,16 +59,19 @@ public class User extends BaseEntity implements Serializable {
     @Column(name = "active")
     private Boolean active;
 
-    @OneToMany(fetch = FetchType.EAGER)
+    @OneToMany(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id",referencedColumnName="user_id")
     private List<Program> programs = new ArrayList<>();
 
     @Transient
     private String accessToken;
 
-//    @OneToMany(fetch = FetchType.EAGER)
-//    @JoinColumn(name = "user_id",referencedColumnName="user_id")
-//    private List<Reward> rewards = new ArrayList<>();
+    @OneToMany(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id",referencedColumnName="user_id")
+    private List<Reward> rewards = new ArrayList<>();
+
+    @Column(name = "role")
+    private String role;
 
 //    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 //    @JoinTable(
@@ -154,11 +158,19 @@ public class User extends BaseEntity implements Serializable {
         this.accessToken = accessToken;
     }
 
-//    public List<Reward> getRewards() {
-//        return rewards;
-//    }
-//
-//    public void setRewards(List<Reward> rewards) {
-//        this.rewards = rewards;
-//    }
+    public List<Reward> getRewards() {
+        return rewards;
+    }
+
+    public void setRewards(List<Reward> rewards) {
+        this.rewards = rewards;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
 }
