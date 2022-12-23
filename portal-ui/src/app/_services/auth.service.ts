@@ -25,13 +25,14 @@ export class AuthService {
     return this.http.get(AUTH_API + 'getUserById/' + id, httpOptions);
   }
 
-  register(firstName: string, lastName: string, username: string, email: string, password: string): Observable<any> {
+  register(firstName: string, lastName: string, username: string, email: string, password: string, role: string): Observable<any> {
     return this.http.post(AUTH_API + 'signUp', {
       firstName,
       lastName,
       username,
       email,
-      password
+      password,
+      role
     }, httpOptions);
   }
 }

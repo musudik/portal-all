@@ -20,6 +20,11 @@ public class QuestionnaireController {
     @Autowired
     private QuestionnaireService questionnaireService;
 
+    /**
+     *
+     * @param questionnaire
+     * @return
+     */
     @PostMapping("/create")
     public ResponseEntity<Result> create(@RequestBody Questionnaire questionnaire) {
         Result result = new Result();
@@ -42,6 +47,10 @@ public class QuestionnaireController {
         }
     }
 
+    /**
+     *
+     * @return
+     */
     @GetMapping
     public ResponseEntity<List<Questionnaire>> getQuestionnaire() {
         try {

@@ -36,4 +36,9 @@ export class ProgramService {
       programIds
      }, httpOptions);
    }
+
+   //get all programs
+   getProgramById(programId: string): Observable<any> {
+     return this.http.get(API_URL + 'getProgramById/' + programId, { });
+   }
 }

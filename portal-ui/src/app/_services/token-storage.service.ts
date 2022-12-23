@@ -1,7 +1,11 @@
 import { Injectable } from '@angular/core';
 
+import { NextQuestion, NextQuestionAdapter } from "../model/nextQuestion.model";
+
 const TOKEN_KEY = 'auth-token';
 const USER_KEY = 'auth-user';
+const NEXT_QUESTION_INPUT = 'next-question';
+const RECON_PROGRAM = 'recon-program';
 
 @Injectable({
   providedIn: 'root'
@@ -34,5 +38,28 @@ export class TokenStorageService {
     }
 
     return {};
+  }
+
+  public saveNextQuestion(nextQuestionInput: any): void {
+    window.sessionStorage.removeItem(NEXT_QUESTION_INPUT);
+    window.sessionStorage.setItem(NEXT_QUESTION_INPUT, JSON.stringify(nextQuestionInput));
+  }
+
+  public getNextQuestion(): any | null {
+    const nextQuestion = window.sessionStorage.getItem(NEXT_QUESTION_INPUT);
+    if (nextQuestion) {
+      return JSON.parse(nextQuestion);
+    }
+
+    return {};
+  }
+
+  public saveProgram(program: string): void {
+    window.sessionStorage.removeItem(RECON_PROGRAM);
+    window.sessionStorage.setItem(RECON_PROGRAM, program);
+  }
+
+  public getProgram(): string | null {
+    return window.sessionStorage.getItem(RECON_PROGRAM);
   }
 }

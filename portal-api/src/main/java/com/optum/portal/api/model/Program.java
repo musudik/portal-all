@@ -39,7 +39,7 @@ public class Program extends BaseEntity implements Serializable {
     private String description;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "program", nullable = true)
+	@JoinColumn(name = "user", nullable = true)
 	@OnDelete(action = OnDeleteAction.CASCADE)
 	private User user;
 

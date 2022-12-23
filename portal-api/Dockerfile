@@ -5,7 +5,7 @@ FROM openjdk:8-jdk-alpine
 #FROM adoptopenjdk/openjdk11:alpine-jre
 
 # Refer to Maven build -> finalName
-ARG JAR_FILE=healthcare-wellbeing-0.0.1-SNAPSHOT.jar
+ARG JAR_FILE=target/healthcare-wellbeing-0.0.1-SNAPSHOT.jar
 
 # cd /opt/app
 WORKDIR /opt/app

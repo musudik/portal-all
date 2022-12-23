@@ -16,10 +16,20 @@ public class EmailService {
 	@Autowired
 	private JavaMailSender emailSender;
 
+	/**
+	 *
+	 * @param emailSender
+	 */
 	public EmailService(JavaMailSender emailSender) {
 		this.emailSender = emailSender;
 	}
 
+	/**
+	 *
+	 * @param to
+	 * @param subject
+	 * @param text
+	 */
 	public void sendSimpleMessage(String to, String subject, String text) {
 		try {
 			SimpleMailMessage message = new SimpleMailMessage();/// message.setFrom(NOREPLY_ADDRESS);

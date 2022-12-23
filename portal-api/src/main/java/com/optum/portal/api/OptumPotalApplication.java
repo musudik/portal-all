@@ -7,6 +7,8 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.data.repository.config.BootstrapMode;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.jdbc.datasource.init.DatabasePopulator;
 import org.springframework.jdbc.datasource.init.DatabasePopulatorUtils;
@@ -16,6 +18,7 @@ import javax.annotation.PostConstruct;
 
 
 @SpringBootApplication(exclude = {SecurityAutoConfiguration.class })
+@EnableJpaRepositories(bootstrapMode = BootstrapMode.DEFAULT)
 public class OptumPotalApplication {
 
 	@Value("${spring.datasource.url}")

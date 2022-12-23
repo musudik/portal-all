@@ -22,6 +22,11 @@ public class ProgramController {
     @Autowired
     private ProgramService programService;
 
+    /**
+     *
+     * @param program
+     * @return
+     */
     @PostMapping("/create")
     public ResponseEntity<Result> create(@RequestBody Program program) {
         Result result = new Result();
@@ -44,6 +49,10 @@ public class ProgramController {
         }
     }
 
+    /**
+     *
+     * @return
+     */
     @GetMapping
     public ResponseEntity<List<Program>> getPrograms() {
         try {
@@ -57,6 +66,11 @@ public class ProgramController {
         }
     }
 
+    /**
+     *
+     * @param name
+     * @return
+     */
     @PostMapping("/{name}")
     public ResponseEntity<Program> getProgramByName(@PathVariable("name") String name) {
         try {
@@ -67,6 +81,26 @@ public class ProgramController {
         }
     }
 
+    /**
+     *
+     * @param programId
+     * @return
+     */
+    @GetMapping("/getProgramById/{programId}")
+    public ResponseEntity<Program> getProgramById(@PathVariable("programId") String programId) {
+        try {
+            Program program = programService.getProgramById(Long.valueOf(programId)).get();
+            return new ResponseEntity<>(program, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    /**
+     *
+     * @param enrollProgramRequest
+     * @return
+     */
     @PostMapping("/register")
     public ResponseEntity<Result> registerProgram(@RequestBody EnrollProgramRequest enrollProgramRequest) {
         Result result = new Result();
@@ -82,6 +116,11 @@ public class ProgramController {
         }
     }
 
+    /**
+     *
+     * @param enrollProgramRequest
+     * @return
+     */
     @PostMapping("/deregister")
     public ResponseEntity<Result> deregisterProgram(@RequestBody EnrollProgramRequest enrollProgramRequest) {
         Result result = new Result();

@@ -21,6 +21,11 @@ public class RewardController {
     @Autowired
     private RewardService rewardService;
 
+    /**
+     *
+     * @param Reward
+     * @return
+     */
     @PostMapping("/create")
     public ResponseEntity<Result> create(@RequestBody Reward Reward) {
         Result result = new Result();
@@ -43,6 +48,10 @@ public class RewardController {
         }
     }
 
+    /**
+     *
+     * @return
+     */
     @GetMapping
     public ResponseEntity<List<Reward>> getRewards() {
         try {

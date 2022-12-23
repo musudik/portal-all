@@ -35,7 +35,7 @@ public class LoadDatabase {
 		// schema init
 		Resource schema = new ClassPathResource("schema.sql");
 		Resource initData = new ClassPathResource("data.sql");
-		DatabasePopulator databasePopulator = new ResourceDatabasePopulator(initData);
+		DatabasePopulator databasePopulator = new ResourceDatabasePopulator(schema, initData);
 		DatabasePopulatorUtils.execute(databasePopulator, dataSource);
 
 		return dataSource;

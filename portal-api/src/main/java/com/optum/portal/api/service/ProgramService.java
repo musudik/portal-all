@@ -58,6 +58,13 @@ public class ProgramService {
     public Program getProgramByName(String name) { return programRepository.findByName(name); }
 
     /**
+     * get a program by id
+     * @param id
+     * @return
+     */
+    public Optional<Program> getProgramById(Long id) { return programRepository.findById(id); }
+
+    /**
      * register user for a program
      * @param request
      * @return
