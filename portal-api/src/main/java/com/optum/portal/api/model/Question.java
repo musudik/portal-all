@@ -38,7 +38,7 @@ public class Question extends BaseEntity implements Serializable {
     private String category;
 
     @Column(name = "question_level")
-    private int questionLevel;
+    private Long questionLevel;
 
     public Long getQuestionId() {
         return questionId;
@@ -72,11 +72,11 @@ public class Question extends BaseEntity implements Serializable {
         this.category = category;
     }
 
-    public int getQuestionLevel() {
+    public Long getQuestionLevel() {
         return questionLevel;
     }
 
-    public void setQuestionLevel(int questionLevel) {
+    public void setQuestionLevel(Long questionLevel) {
         this.questionLevel = questionLevel;
     }
 }

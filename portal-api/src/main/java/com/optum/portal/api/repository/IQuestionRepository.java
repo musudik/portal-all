@@ -8,5 +8,5 @@ import org.springframework.data.repository.query.Param;
 public interface IQuestionRepository extends JpaRepository<Question, Long> {
 
     @Query("Select q from Question q WHERE q.category=:category and q.questionLevel=:questionLevel")
-    Question findQuestionByLevelAndCategory(@Param("category") String category, @Param("questionLevel") int questionLevel);
+    Question findQuestionByLevelAndCategory(@Param("category") String category, @Param("questionLevel") long questionLevel);
 }

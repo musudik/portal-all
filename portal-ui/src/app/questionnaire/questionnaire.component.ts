@@ -102,6 +102,29 @@ export class QuestionnaireComponent implements OnInit {
       this.reloadPage();
   }
 
+  registerProgram(programId:string) {
+      const user = this.tokenStorage.getUser();
+      let userId = user.id;
+      console.log('userId==>', userId);
+      let programIds = [];
+      programIds.push(programId);
+      this.programService.register(userId, programIds).subscribe(
+         data => {
+         console.log(data);
+            this.msg='You are successfully registered for the program ' + programId  + ', please check the programs section';
+         },
+         err => {
+           this.msg = err.error.message;
+         }
+      );
+  }
+
+  startAgain() {
+      this.tokenStorage.removeNextQuestion();
+      this.tokenStorage.removeProgram();
+      this.reloadPage();
+  }
+
   async reloadPage() {
        window.location.reload();
   }

@@ -1,7 +1,6 @@
 package com.optum.portal.api.controller;
 
-import com.optum.portal.api.model.Questionnaire;
-import com.optum.portal.api.model.Result;
+import com.optum.portal.api.model.*;
 import com.optum.portal.api.service.QuestionnaireService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -11,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @CrossOrigin(origins = "http://localhost:8081")
 @RestController
@@ -62,5 +62,23 @@ public class QuestionnaireController {
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
+    }
+
+    /**
+     *
+     * @param questionId
+     * @return
+     */
+    @GetMapping("/getQuestionById/{questionId}")
+    public ResponseEntity<Question> getQuestionById(@PathVariable("questionId") long questionId) {
+        try {
+                Optional<Question> question1 = questionnaireService.getQuestionsAndAnswers(questionId);
+                if(question1.isPresent()) {
+                    return new ResponseEntity<>(question1.get(), HttpStatus.OK);
+                }
+        } catch (Exception ex) {
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+        return null;
     }
 }

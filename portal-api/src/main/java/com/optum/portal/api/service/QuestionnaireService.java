@@ -86,7 +86,7 @@ public class QuestionnaireService {
      * @param level
      * @return
      */
-    public Question getQuestionsAndAnswers(String category, int level) {
+    public Question getQuestionsAndAnswers(String category, long level) {
         return questionRepository.findQuestionByLevelAndCategory(category, level);
     }
 

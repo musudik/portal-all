@@ -16,16 +16,16 @@ values (107, 'Family Care', 'Customized health care program for entire family', 
 insert into questionnaire (questionnaire_id, question, answer, created_by, created_date)
 values (1, 'How often can we take an doctor appointment in a week?', '2 times maximum', 'system', '2022-12-02 12:00:00');
 insert into questionnaire (questionnaire_id, question, answer, created_by, created_date)
-values (2, 'What all health insurences are covered in your hospital?', 'we are covered with all public and private insurences', 'system', '2022-12-02 12:00:00');
+values (2, 'What all health insurance are covered in your hospital?', 'we are covered with all public and private insurences', 'system', '2022-12-02 12:00:00');
 insert into questionnaire (questionnaire_id, question, answer, created_by, created_date)
-values (3, 'Will you cover the physio theraphy in your health care center', 'yes, we cover the physio theraphy', 'system', '2022-12-02 12:00:00');
+values (3, 'Will you cover the physio therapy in your health care center', 'yes, we cover the physio theraphy', 'system', '2022-12-02 12:00:00');
 insert into questionnaire (questionnaire_id, question, answer, created_by, created_date)
 values (4, 'Do you have cardiology specialist in your health care center?', 'yes, we have cardiology specialist dr. sam', 'system', '2022-12-02 12:00:00');
 insert into questionnaire (questionnaire_id, question, answer, created_by, created_date)
 values (5, 'What are the working hours?', 'all days from 8am to 6pm', 'system', '2022-12-02 12:00:00');
 
 insert into reward (reward_id, reward_name, description, created_by, created_date)
-values (1001, 'Best Newbie', 'best new joinee of the fitness program', 'system', '2022-12-02 12:00:00');
+values (1001, 'Best Newbie', 'best new joiner of the fitness program', 'system', '2022-12-02 12:00:00');
 insert into reward (reward_id, reward_name, description, created_by, created_date)
 values (1002, 'Shooting Star', 'best customer of the month', 'system', '2022-12-02 12:00:00');
 insert into reward (reward_id, reward_name, description, created_by, created_date)
@@ -41,31 +41,37 @@ values (2, 'Select your sex', 'general', 0, 'system', '2022-12-02 12:00:00');
 insert into question (question_id, question, category, question_level, created_by, created_date)
 values (3, 'Enter the age', 'general', 0, 'system', '2022-12-02 12:00:00');
 insert into question (question_id, question, category, question_level, created_by, created_date)
-values (4, 'Which program are you looking for?', 'general', 0, 'system', '2022-12-02 12:00:00'); --physical or mental
+values (4, 'Which program are you looking for?', 'general', 0, 'system', '2022-12-02 12:00:00');
 insert into question (question_id, question, category, question_level, created_by, created_date)
-values (5, 'Which part of your body is having an issue?', 'physical', 1, 'system', '2022-12-02 12:00:00'); --head or chest or abdomen or legs
+values (5, 'Which part of your body is having an issue?', 'physical', 1, 'system', '2022-12-02 12:00:00');
 insert into question (question_id, question, category, question_level, created_by, created_date)
-values (6, 'Do you have any of the following symptoms?', 'head', 2, 'system', '2022-12-02 12:00:00'); --headache or face pain or sinus pain or pressure or fever --swollen face -facial muscle weakness
+values (6, 'Do you have any of the following symptoms?', 'head', 2, 'system', '2022-12-02 12:00:00');
 insert into question (question_id, question, category, question_level, created_by, created_date)
-values (7, 'Do you have any of the following symptoms?', 'chest', 2, 'system', '2022-12-02 12:00:00'); --chest painchest pain, spreading to the left upper limbpressing chest painheartburnpalpitationsfast heart rate
+values (7, 'Do you have any of the following symptoms?', 'chest', 2, 'system', '2022-12-02 12:00:00');
 insert into question (question_id, question, category, question_level, created_by, created_date)
-values (8, 'do you have any of the following symptoms?', 'abdomen', 2, 'system', '2022-12-02 12:00:00'); --stomach pain or burning or crampy stomach pain
+values (8, 'do you have any of the following symptoms?', 'abdomen', 2, 'system', '2022-12-02 12:00:00');
 insert into question (question_id, question, category, question_level, created_by, created_date)
-values (9, 'Do you have any of the following symptoms?', 'legs', 2, 'system', '2022-12-02 12:00:00'); --knee pain or ankle or feet pain or flat foot
+values (9, 'Do you have any of the following symptoms?', 'legs', 2, 'system', '2022-12-02 12:00:00');
 insert into question (question_id, question, category, question_level, created_by, created_date)
-values (10, 'Do you have mental stress due to', 'mental', 1, 'system', '2022-12-02 12:00:00'); -- depression or anxiety  or office tension or relationship or other reasons
+values (10, 'Do you have mental stress due to', 'mental', 1, 'system', '2022-12-02 12:00:00');
 insert into question (question_id, question, category, question_level, created_by, created_date)
-values (11, 'Thoughts that you would be better off dead, or of hurting yourself', 'depression', 2, 'system', '2022-12-02 12:00:00'); --not at all or several days or more than half the days or nearly every day
+values (11, 'Thoughts that you would be better off dead, or of hurting yourself', 'depression', 2, 'system', '2022-12-02 12:00:00');
 insert into question (question_id, question, category, question_level, created_by, created_date)
-values (12, 'Trouble concentrating on things, such as reading the newspaper or watching television', 'depression', 3, 'system', '2022-12-02 12:00:00'); --not at all or several days or more than half the days or nearly every day
+values (12, 'Trouble concentrating on things, such as reading the newspaper or watching television', 'depression', 3, 'system', '2022-12-02 12:00:00');
 insert into question (question_id, question, category, question_level, created_by, created_date)
-values (13, 'Feeling bad about yourself - or that you are a failure or have let yourself or your family down', 'depression', 4, 'system', '2022-12-02 12:00:00'); --not at all or several days or more than half the days or nearly every day
+values (13, 'Feeling bad about yourself - or that you are a failure or have let yourself or your family down', 'depression', 4, 'system', '2022-12-02 12:00:00');
 insert into question (question_id, question, category, question_level, created_by, created_date)
-values (14, 'Not being able to stop or control worrying', 'anxiety', 2, 'system', '2022-12-02 12:00:00'); --not at all or several days or more than half the days or nearly every day
+values (14, 'Not being able to stop or control worrying', 'anxiety', 2, 'system', '2022-12-02 12:00:00');
 insert into question (question_id, question, category, question_level, created_by, created_date)
-values (15, 'Becoming easily annoyed or irritable', 'anxiety', 3, 'system', '2022-12-02 12:00:00'); --not at all or several days or more than half the days or nearly every day
+values (15, 'Becoming easily annoyed or irritable', 'anxiety', 3, 'system', '2022-12-02 12:00:00');
 insert into question (question_id, question, category, question_level, created_by, created_date)
-values (16, 'Feeling afraid, as if something awful might happen', 'anxiety', 4, 'system', '2022-12-02 12:00:00'); --not at all or several days or more than half the days or nearly every day
+values (16, 'Feeling afraid, as if something awful might happen', 'anxiety', 4, 'system', '2022-12-02 12:00:00');
+insert into question (question_id, question, category, question_level, created_by, created_date)
+values (17, 'How often do you have this?', 'headache', 3, 'system', '2022-12-02 12:00:00');
+insert into question (question_id, question, category, question_level, created_by, created_date)
+values (18, 'Do you take any medication?', 'headache', 4, 'system', '2022-12-02 12:00:00');
+
+
 
 insert into answer (answer_id, answer, question_id, program_id, created_by, created_date)
 values (1,'For you', 1, null, 'system', '2022-12-02 12:00:00');
@@ -189,5 +195,17 @@ insert into answer (answer_id, answer, question_id, program_id, created_by, crea
 values (58,'More than half the days', 16, 106, 'system', '2022-12-02 12:00:00');
 insert into answer (answer_id, answer, question_id, program_id, created_by, created_date)
 values (59,'Nearly every day', 16, 106, 'system', '2022-12-02 12:00:00');
+
+insert into answer (answer_id, answer, question_id, program_id, created_by, created_date)
+values (60,'Several days', 17, 103, 'system', '2022-12-02 12:00:00');
+insert into answer (answer_id, answer, question_id, program_id, created_by, created_date)
+values (61,'Once in a week', 17, 103, 'system', '2022-12-02 12:00:00');
+insert into answer (answer_id, answer, question_id, program_id, created_by, created_date)
+values (62,'Once in a month', 17, 103, 'system', '2022-12-02 12:00:00');
+
+insert into answer (answer_id, answer, question_id, program_id, created_by, created_date)
+values (63,'No', 18, 103, 'system', '2022-12-02 12:00:00');
+insert into answer (answer_id, answer, question_id, program_id, created_by, created_date)
+values (64,'Yes', 18, 103, 'system', '2022-12-02 12:00:00');
 
 commit;

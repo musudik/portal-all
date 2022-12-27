@@ -58,7 +58,7 @@ export class ProgramsComponent implements OnInit {
     this.programService.register(userId, programIds).subscribe(
          data => {
          console.log(data);
-            this.msg='You are successfully registered for the program ' +programId  + ', please reload this page';
+            this.msg='You are successfully registered for the program ' +programId;
             //return this.msg;
             this.reloadPage();
          },

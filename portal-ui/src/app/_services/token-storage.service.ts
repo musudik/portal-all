@@ -41,8 +41,12 @@ export class TokenStorageService {
   }
 
   public saveNextQuestion(nextQuestionInput: any): void {
-    window.sessionStorage.removeItem(NEXT_QUESTION_INPUT);
+    this.removeProgram();
     window.sessionStorage.setItem(NEXT_QUESTION_INPUT, JSON.stringify(nextQuestionInput));
+  }
+
+  public removeNextQuestion(): void {
+    window.sessionStorage.removeItem(NEXT_QUESTION_INPUT);
   }
 
   public getNextQuestion(): any | null {
@@ -55,8 +59,12 @@ export class TokenStorageService {
   }
 
   public saveProgram(program: string): void {
-    window.sessionStorage.removeItem(RECON_PROGRAM);
+    this.removeProgram();
     window.sessionStorage.setItem(RECON_PROGRAM, program);
+  }
+
+  public removeProgram(): void {
+    window.sessionStorage.removeItem(RECON_PROGRAM);
   }
 
   public getProgram(): string | null {

@@ -28,20 +28,27 @@ public class ProgramReconController {
     @PostMapping("nextQuestion")
     public ResponseEntity<Question> getNextQuestion(@RequestBody NextQuestionRequest nextQuestionRequest) {
         try {
+            System.out.println("questionId:" +nextQuestionRequest.getQuestionId() +"/n Level:" +nextQuestionRequest.getLevel()+" /n Category:" +nextQuestionRequest.getCategory());
             Question question = null;
-            long id = 0;
+            long questionId = 0;
             if(nextQuestionRequest.getQuestionId() == null) {
-                id = 1;
+                questionId = 1;
             } else {
-                id = Long.valueOf(nextQuestionRequest.getQuestionId()) + 1;
+                questionId = Long.valueOf(nextQuestionRequest.getQuestionId()) + 1;
             }
             if(nextQuestionRequest.getLevel() == 0) {
-                Optional<Question> question1 = questionnaireService.getQuestionsAndAnswers(id);
+                Optional<Question> question1 = questionnaireService.getQuestionsAndAnswers(questionId);
                 if(question1.isPresent()) {
                     question = question1.get();
                 }
             } else {
-                question = questionnaireService.getQuestionsAndAnswers(nextQuestionRequest.getCategory(), nextQuestionRequest.getLevel());
+                long levelId = nextQuestionRequest.getLevel();
+                /*if (nextQuestionRequest.getLevel() == 1) {
+                    levelId = nextQuestionRequest.getLevel();
+                } else {
+                    levelId = nextQuestionRequest.getLevel() + 1;
+                }*/
+                question = questionnaireService.getQuestionsAndAnswers(nextQuestionRequest.getCategory(), levelId);
             }
             return new ResponseEntity<>(question, HttpStatus.OK);
         } catch (Exception e) {
