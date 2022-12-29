@@ -1,0 +1,73 @@
+<div class="container">
+  <!-- Services Start -->
+  <div class="container-fluid py-5">
+    <div class="container pt-5 pb-3">
+      <h1 class="display-4 text-uppercase text-center mb-5">Top Health <span class="text-primary">Programs</span></h1>
+      <div class="row">
+        <div class="col-lg-3 mb-2">
+          <div class="service-item rounded p-5 mb-4">
+            <i class="fa fa-3x fa-laptop-code text-primary mb-4"></i>
+            <h4 class="text-uppercase mb-4">Weight<span class="d-block text-body">Loss</span></h4>
+            <p class="m-0">Weight loss programs that offer counseling and education</p>
+          </div>
+        </div>
+        <div class="col-lg-3 mb-2">
+          <div class="service-item rounded p-5 mb-4">
+            <i class="fa fa-3x fa-code text-primary mb-4"></i>
+            <h4 class="text-uppercase mb-4">Self<span class="d-block text-body">Management</span></h4>
+            <p class="m-0">Chronic disease self-management tools</p>
+          </div>
+        </div>
+        <div class="col-lg-3 mb-2">
+          <div class="service-item rounded p-5 mb-4">
+            <i class="fa fa-3x fa-envelope-open-text text-primary mb-4"></i>
+            <h4 class="text-uppercase mb-4">Vaccination<span class="d-block text-body">Program</span></h4>
+            <p class="m-0">On-site all kinds of vaccines for all ages</p>
+          </div>
+        </div>
+        <div class="col-lg-3 mb-2">
+          <div class="service-item rounded p-5 mb-4">
+            <i class="fa fa-3x fa-edit text-primary mb-4"></i>
+            <h4 class="text-uppercase mb-4">Family  <span class="d-block text-body">Care</span></h4>
+            <p class="m-0">Customized health care program for entire family</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Services End -->
+
+  <div class="alert alert-success" *ngIf="msg">
+    {{ msg }}.
+  </div>
+
+  <header class="jumbotron">
+    <h2 class="display-4 text-uppercase text-center mb-5">Available Programs To Enroll</h2>
+    <div class="container">
+      <h3>mat-list and mat-list-item</h3>
+      <mat-list>
+        <mat-list-item>Suresh</mat-list-item>
+        <mat-list-item>Mahesh</mat-list-item>
+        <mat-list-item>Krishna</mat-list-item>
+      </mat-list>
+      <h3>mat-nav-list and mat-list-item</h3>
+      <mat-nav-list>
+        <a mat-list-item href="http://linktest1.com" >
+          <mat-icon>book</mat-icon>
+        </a>
+        <a mat-list-item href="http://linktest2.com" >
+          <mat-icon>cloud</mat-icon>
+        </a>
+      </mat-nav-list>
+      <h3>mat-selection-list and mat-list-option</h3>
+      <form [formGroup]="techForm" (ngSubmit)="onFormSubmit()">
+        <mat-selection-list formControlName="selectedTech">
+          <mat-list-option *ngFor="let tech of techList" [value]="tech">
+            {{tech.lang}}
+          </mat-list-option>
+        </mat-selection-list>
+        <button mat-raised-button color="warn">Submit</button>
+      </form>
+    </div>
+  </header>
+</div>

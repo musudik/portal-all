@@ -13,12 +13,16 @@ import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
 import { BoardUserComponent } from './board-user/board-user.component';
 import { ProgramsComponent } from './programs/programs.component';
+import { ActivitiesComponent } from './activities/activities.component';
 import { RewardsComponent } from './rewards/rewards.component';
 import { QuestionnaireComponent } from './questionnaire/questionnaire.component';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatListModule } from '@angular/material'
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 import { authInterceptorProviders } from './_helpers/auth.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -34,6 +38,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BoardModeratorComponent,
     BoardUserComponent,
     ProgramsComponent,
+    ActivitiesComponent,
     RewardsComponent,
     QuestionnaireComponent
   ],
@@ -45,6 +50,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     MatButtonModule,
     MatInputModule,
+    MatIconModule,
+    MatListModule,
+    MatButtonModule,
     MatFormFieldModule,
     BrowserAnimationsModule
   ],
